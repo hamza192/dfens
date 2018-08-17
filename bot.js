@@ -1,5 +1,13 @@
 
 
+
+
+
+
+
+
+
+
 client.on('ready', function(){
   require("./antispam.js")(client, function(message){
      message.delete().then(yumz => {
@@ -9,18 +17,6 @@ client.on('ready', function(){
    });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -48,5 +44,6 @@ client.on('ready', function(){
         }
       });
     }
+
 
 client.login(process.env.BOT_TOKEN);
