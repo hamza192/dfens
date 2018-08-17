@@ -29,6 +29,29 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 });
 
 
+client.on('ready', function(){
+  require("./antispam.js")(client, function(message){
+     message.delete().then(yumz => {
+     message.channel.send(`stop spamming kid <@${message.author.id}>`).then(spammer => {
+     spammer.delete(2000)
+   });
+   });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	let message_handler = {};
     let tolerancia = [4, 3500]; //4 messages in less than 1200ms = spam
