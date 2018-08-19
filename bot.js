@@ -30,7 +30,6 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 
 
 
-
 var user = {};
 var warn = {};
 
@@ -95,7 +94,11 @@ hours = currentTime.getHours() + 3 ,
 delete warn[message.author.id];
     delete user[message.author.id];
     
-    const embed500 = new Discord.RichEmbed()
+
+
+
+
+const embed500 = new Discord.RichEmbed()
      .setTitle(`المرسل ${message.author.username}#${message.author.discriminator} `)
       .setDescription(":white_check_mark:  | `محاولة السبام`\n\nالاسم:\n"+`${message.author.username}#${message.author.discriminator}`+"\nالعقوبة:\n  MuteChat / ميوت كتابي\n")
       .setFooter("Anti - Spam")
@@ -111,11 +114,6 @@ delete warn[message.author.id];
   
   }
 });
-
-
-
-
-
 
 
 
