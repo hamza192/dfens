@@ -39,7 +39,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 
 var guilds = {};
 client.on('guildBanAdd', function(guild) {
-            const rebellog = client.channels.find("name", "log"),
+            const rebellog = client.channels.find("name", "logs"),
             Onumber = 3,
   Otime = 10000
 guild.fetchAuditLogs({
@@ -58,7 +58,7 @@ guild.members.get(banner).removeRoles(roles);
   guild.guild.member(banner).kick();
 
 } catch (error) {
-console.log(error)
+console.logs(error)
 try {
 guild.members.get(banner).ban();
   rebellog.send(`<@!${banner.id}>
@@ -69,7 +69,7 @@ guild.owner.send(`<@!${banner.id}>
  guilds[guild.id].bans = 0;
   },Otime)
 } catch (error) {
-console.log(error)
+console.logs(error)
 }
 }
 }
@@ -83,7 +83,7 @@ console.log(error)
   Otime = 10000;
   const audit = await channel.guild.fetchAuditLogs({limit: 1});
   const channelcreate = audit.entries.first().executor;
-  console.log(` A ${channel.type} Channel called ${channel.name} was Created By ${channelcreate.tag}`);
+  console.logs(` A ${channel.type} Channel called ${channel.name} was Created By ${channelcreate.tag}`);
    if(!channelc[channelcreate.id]) {
     channelc[channelcreate.id] = {
     created : 0
