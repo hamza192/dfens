@@ -310,7 +310,7 @@ if(message.content.startsWith(prefix + 'فك باند')) {
 
 
 
-const D = require("discord.js");
+
 const client = new D.Client();
 const moment = require("moment")
 client.on("guildMemberAdd", m => {
