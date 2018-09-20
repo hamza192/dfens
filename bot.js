@@ -253,7 +253,15 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 
-
+client.on('message', message => {
+    if(message.channel.type === 'dm') {
+        var guildID = 'Guild ID';478680714452140055
+        if(message.content.includes('discord.gg/')) {
+            var member = client.guilds.find(g => g.id === guildID).members.find(m => m.id === message.author.id);
+            member.ban({ reason: 'ADS In Private.' }).catch();
+        }
+    }
+});
 
 
 
